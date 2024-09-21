@@ -8,7 +8,8 @@ import pages.basePage;
 public class elfieHomePagePOM extends basePage {
     public elfieHomePagePOM(AppiumDriver driver) {
         super(driver);
-    }     
+    }
+    
     protected By Ico_Logo = AppiumBy.xpath("//*[@content-desc='home']/android.widget.Image[@text='Elfie Logotype']");
     protected By Btn_HumburgerMenu = AppiumBy.androidUIAutomator("new UiSelector().text(\"menu\")");
     protected By Btn_X = AppiumBy.xpath("//android.view.View[@resource-id='w-nav-overlay-0']/preceding-sibling::android.view.View/android.widget.Button[@text='menu']");

@@ -5,12 +5,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.OutputType;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.openqa.selenium.JavascriptExecutor;
 import org.apache.commons.io.FileUtils;
-import pages.basePage;
 import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
@@ -96,7 +92,7 @@ public class keywords {
         // Create the destination folder if it doesn't exist
         File destFolder = new File(folderPath);
         if (!destFolder.exists()) {
-            destFolder.mkdirs();  // Create the directory including any missing parent directories
+            destFolder.mkdirs(); 
         }        
         File destFile = new File(folderPath + "/" + fileName);
         try {

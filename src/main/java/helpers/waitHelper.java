@@ -22,22 +22,25 @@ public class waitHelper {
         this.wait = new WebDriverWait(driver, Duration.ofSeconds(defaultTimeout));  // Adjust timeout as needed
     }
 
+    //wait for visibility of element with default timeout
     public WebElement waitForVisibility(By locator) {
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
+    
+    //wait for visibility of element with custom timeout
     public WebElement waitForVisibility(By locator, int timeout) {
 		this.wait.withTimeout(Duration.ofSeconds(timeout));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
-
+    
     public WebElement waitForClickability(By locator) {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-
+    
     public WebElement waitForPresence(By locator) {
         return wait.until(ExpectedConditions.presenceOfElementLocated(locator));
     }
-
+    
     public boolean waitForElementToDisappear(By locator) {
         return wait.until(ExpectedConditions.invisibilityOfElementLocated(locator));
     }

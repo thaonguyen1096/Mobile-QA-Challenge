@@ -11,7 +11,7 @@ public class elfieTest extends baseTest {
     elfieHomePage elfieHomePage;
 
     @Test
-    public void testGoogleSearchAndVerify()
+    public void verifyElfieHomePage()
     {        
         driver.get("https://www.google.com/");        
         googlePage.switchToNativeContext();

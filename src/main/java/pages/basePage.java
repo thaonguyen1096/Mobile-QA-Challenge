@@ -23,7 +23,7 @@ public class basePage {
     }
     
 
- // Method to switch to WebView context
+    //Switch to WebView context
     public void switchToWebContext() {
         // Get all available contexts (NATIVE_APP and WEBVIEW)
         Set<String> contextNames = ((AndroidDriver)driver).getContextHandles();
@@ -39,10 +39,10 @@ public class basePage {
         }
     }
 
-    // Method to switch back to Native context
+    // Switch to Native context
     public void switchToNativeContext() {
-    	((AndroidDriver)driver).context("NATIVE_APP");  // Switch back to Native App context
-        System.out.println("Switched back to Native context");
+    	((AndroidDriver)driver).context("NATIVE_APP");  
+        System.out.println("Switched to Native context");
     }
     
     public String datetimeToString(LocalDateTime datetime, String format)
@@ -52,6 +52,6 @@ public class basePage {
     
     public String generateFileName(String fileName)
     {
-    	return fileName + "_" + datetimeToString(LocalDateTime.now(), "yyyymmdd_HHmmss") + ".png";
+    	return String.format("%s_%s.png", fileName, datetimeToString(LocalDateTime.now(), "yyyymmdd_HHmmss"));
     }
 }

@@ -11,6 +11,7 @@ public class googleSearchPagePOM extends basePage {
     public googleSearchPagePOM(AppiumDriver driver) {
         super(driver);
 	}
+    
 	protected By Txt_Search = AppiumBy.xpath("//android.view.View/android.widget.EditText");
     protected By Ico_Search = AppiumBy.xpath("//android.view.View[@resource-id='main']/android.view.View/android.widget.Button");
     protected By Btn_Search = AppiumBy.xpath("//*[@content-desc='Search']");
